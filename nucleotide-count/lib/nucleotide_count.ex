@@ -14,6 +14,7 @@ defmodule NucleotideCount do
   """
   @spec count(charlist(), char()) :: non_neg_integer()
   def count(strand, nucleotide) do
+    Enum.count(strand, fn (x) -> x == nucleotide end)
   end
 
   @doc """
@@ -26,5 +27,13 @@ defmodule NucleotideCount do
   """
   @spec histogram(charlist()) :: map()
   def histogram(strand) do
+    base_histogram = [?A, ?T, ?C, ?G]
+    Map.new(base_histogram, &{&1, count(strand, &1)})
   end
+
+  # histogram version 2
+  # def histogram(strand) do
+  #   base_histogram = %{?A => 0, ?T => 0, ?C => 0, ?G => 0}
+  #   base_histogram |> Map.merge(Enum.frequencies(strand))
+  # end
 end
