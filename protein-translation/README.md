@@ -1,5 +1,13 @@
 # Protein Translation
 
+About the solution:
+
+* Enum.chunk_every : https://hexdocs.pm/elixir/Enum.html#chunk_every/2
+* Enum.take_while : https://hexdocs.pm/elixir/Enum.html#take_while/2
+* Error Handling : https://elixirschool.com/es/lessons/advanced/error-handling/
+
+---
+
 Translate RNA sequences into proteins.
 
 RNA can be broken into three nucleotide sequences called codons, and then translated to a polypeptide like so:
