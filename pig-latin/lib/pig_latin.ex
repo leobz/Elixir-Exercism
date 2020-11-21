@@ -1,19 +1,35 @@
 defmodule PigLatin do
-  @doc """
-  Given a `phrase`, translate it a word at a time to Pig Latin.
+  @vowels ["a", "e", "i", "o", "u"]
 
-  Words beginning with consonants should have the consonant moved to the end of
-  the word, followed by "ay".
-
-  Words beginning with vowels (aeiou) should have "ay" added to the end of the
-  word.
-
-  Some groups of letters are treated like consonants, including "ch", "qu",
-  "squ", "th", "thr", and "sch".
-
-  Some groups are treated like vowels, including "yt" and "xr".
-  """
   @spec translate(phrase :: String.t()) :: String.t()
   def translate(phrase) do
+    phrase
+    |> String.split(" ")
+    |> Enum.map(&(translate_word/1))
+    |> Enum.join(" ")
   end
+
+  defp translate_word(word) do
+    <<_ , rest::bytes>> = word
+    first = String.first(word)
+    second = String.at(word, 1)
+    last = String.last(word)
+
+    cond do
+      first == "u" and last == "q" -> translate(rest <> first)
+      first == "x" and is_consonant(second) -> word <> "ay"
+      first == "y" and is_consonant(second) -> word <> "ay"
+      is_vocal(first) -> word <> "ay"
+      true -> translate(rest <> first)
+    end
+  end
+
+  defp is_vocal(char) do
+    Enum.member?(@vowels, char)
+  end
+
+  defp is_consonant(char) do
+    !Enum.member?(@vowels, char)
+  end
+
 end

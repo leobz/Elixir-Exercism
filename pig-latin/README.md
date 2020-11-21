@@ -1,5 +1,11 @@
 # Pig Latin
 
+About solution: 
+* Enum.join: https://www.programming-idioms.org/idiom/53/join-a-list-of-strings/903/elixir
+* String and Pattern Matching with Binary: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#binaries
+
+---
+
 Implement a program that translates from English to Pig Latin.
 
 Pig Latin is a made-up children's language that's intended to be
