@@ -7,8 +7,8 @@ defmodule WordCount do
   @spec count(String.t()) :: map
   def count(sentence) do
     sentence
-    |> String.split(~r{[^a-zA-Z0-9ö\-]}, trim: true)
-    |> Enum.map(&(String.downcase/1))
+    |> String.downcase()
+    |> String.split(~r{[^[:alpha:][:alnum:]ö\-]}, trim: true) # Equivalent to ~r{[^a-zA-Z0-9ö\-]}, trim: true
     |> Enum.frequencies()
   end
 end

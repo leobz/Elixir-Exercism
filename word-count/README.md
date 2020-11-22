@@ -3,6 +3,7 @@
 About the solution: 
 
 * Regex online: https://regex101.com/
+* Elixir Regex: https://hexdocs.pm/elixir/Regex.html
 * Sigils para expresiones regulaes : https://elixir-lang.org/getting-started/sigils.html
 * Map.frequencies : https://hexdocs.pm/elixir/Enum.html#frequencies/1
 
