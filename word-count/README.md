@@ -1,5 +1,13 @@
 # Word Count
 
+About the solution: 
+
+* Regex online: https://regex101.com/
+* Sigils para expresiones regulaes : https://elixir-lang.org/getting-started/sigils.html
+* Map.frequencies : https://hexdocs.pm/elixir/Enum.html#frequencies/1
+
+---
+
 Given a phrase, count the occurrences of each word in that phrase.
 
 For example for the input `"olly olly in come free"`
