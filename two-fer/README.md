@@ -1,5 +1,12 @@
 # Two Fer
 
+About the solution:
+
+* Strings == Binaries : https://culttt.com/2016/03/21/working-strings-elixir/
+* Default arguments: https://elixir-lang.org/getting-started/modules-and-functions.html#default-arguments
+
+---
+
 `Two-fer` or `2-fer` is short for two for one. One for you and one for me.
 
 ```text
