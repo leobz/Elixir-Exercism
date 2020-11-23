@@ -1,5 +1,12 @@
 # Roman Numerals
 
+About the solution: 
+
+* Recursion : https://elixir-lang.org/getting-started/recursion.html
+* Tupple: https://hexdocs.pm/elixir/Tuple.html
+
+---
+
 Write a function to convert from normal numbers to Roman Numerals.
 
 The Romans were a clever bunch. They conquered most of Europe and ruled
